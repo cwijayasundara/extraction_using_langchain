@@ -44,4 +44,5 @@ llm = ChatOpenAI(model="gpt-4o",
 runnable = prompt | llm.with_structured_output(schema=Person)
 
 response = runnable.invoke({"text": text})
+
 print(response)
